@@ -1,3 +1,11 @@
+:root{
+  --main-font: releway;
+  --accent-font: 'STIX Two Text';
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: orange;
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +15,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  color: var(--text-color,#312a4e);
+  font-family: var(--main-font,sans-serif);
+  background-color: var(--bg-color, #f3efec);
 }
 
 p,
@@ -19,4 +30,94 @@ ol,
 li,
 figure {
   margin: 0;
+}
+
+.heading { 
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 27px */
+}
+.header{
+  padding-block-start: 10%;
+}
+.content-section{
+  padding:0 5vi;
+}
+.header__title{
+  font-size: clamp(3.75rem, 2.3684rem + 6.3158vw, 7.5rem);
+  margin-block-end:40px;
+}
+.content__title{
+ font-size:30px;
+ margin: 7% 0 2.5%;
+}
+
+.content__text-block{
+  font-family: Raleway;
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type){
+  margin-block-end:1.5em;
+}
+
+.content__text-block a {
+  color:inherit;
+}
+.content__blockquote{
+font-style: italic;
+inline-size:75%;
+margin:0 auto 1.5em;
+line-height:2;
+}
+
+.content__list{
+  list-style:none;
+  padding:0 0 0 40px;
+
+}
+.content__list li{
+  position:relative;
+}
+.content__list li:not(:last-of-type){
+  margin-block-end:10px;
+}
+.content__list li::before{
+  content:'';
+  position:absolute;
+  inline-size: 15px;
+  block-size: 15px;
+  margin-block-start: -7.5px;
+  background-image: url(/images/marker-light.svg);
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+  inset-block-start:50%;
+  inset-inline-start:-25px;
+}
+.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  display:inline-block;
+  margin-inline-end:1px;
+  padding:0 4px;
+  font-weight:700;
+  font-size:30px;
+  background-color: var(--accent-color);
+}
+
+.content__picture{
+  inline-size: 100%;
+}
+
+.content__figure {
+  position: relative;
+  inline-size: calc(100% + 10vi);
+  margin: 7% auto;
+  inset-inline-end: 5vi;
+}
+.content__picture-caption{
+  border-block-end: 1px solid currentColor;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
 }
