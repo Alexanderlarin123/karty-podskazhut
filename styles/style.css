@@ -215,6 +215,14 @@ line-height:2;
   inline-size: calc(100% + 8px);
 }
 
+.header__theme-botton_type_light{
+
+}
+
+.header__theme-botton_type_light{
+  
+}
+
 footer{
   display: flex;
   justify-content: center;
